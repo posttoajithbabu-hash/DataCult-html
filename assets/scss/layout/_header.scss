@@ -1,5 +1,5 @@
 .header {
-  // position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -10,7 +10,7 @@
 
 
   &.scrolled {
-    background-color: #103747;
+    // background-color: #103747;
     transition: all 0.4s;
     // .header-wrapper {
     //   padding: 0 105px 0 105px;
@@ -26,15 +26,15 @@
 
     }
 
-    .logo-box {
-      min-width: 150px;
-      max-width: 150px;
+    // .logo-box {
+    //   min-width: 150px;
+    //   max-width: 150px;
 
-      @include mq(tablet) {
-        min-width: 130px;
-        max-width: 130px;
-      }
-    }
+    //   @include mq(tablet) {
+    //     min-width: 130px;
+    //     max-width: 130px;
+    //   }
+    // }
 
     // .header-navbar .header-list .nav-link {
     //   padding: 36px 0 30px 0;
