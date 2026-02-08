@@ -6,6 +6,7 @@
   z-index: 9;
   width: 100%;
   transition: all 0.4s;
+  background-color: #04314B;
 
 
   &.scrolled {
@@ -45,8 +46,9 @@
   }
 
   .header-wrapper {
-    padding: 24px 105px;
-    background-color: #04314B;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 0px;
     transition: all 0.3s;
 
     @include mq(tablet) {

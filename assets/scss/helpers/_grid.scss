@@ -25,3 +25,21 @@
 		}
 	}
 }
+
+.container-large {
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
+
+	@include mq(desktop-wide) {
+		padding: 0 30px;
+	}
+
+	@include mq(desktop) {
+		padding: 0 30px;
+	}
+
+	@include mq(phone) {
+		padding: 0 15px;
+	}
+}

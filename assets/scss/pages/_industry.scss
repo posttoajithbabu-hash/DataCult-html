@@ -1,0 +1,69 @@
+// industry-banner-section
+.industry-banner-section {
+  padding: 144px 0 80px 0;
+  background-color: $home-bg;
+  background-image: url(../images/service-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+
+  @include mq(tablet) {
+    padding: 120px 0 72px 0;
+  }
+
+  @include mq(phone) {
+    padding: 96px 0 64px 0;
+  }
+
+  .industry-banner-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 290px;
+
+    @include mq(tablet) {
+      gap: 160px;
+    }
+
+    @include mq(phone) {
+      gap: 120px;
+    }
+  }
+
+  .industry-banner-eyebrow {
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .industry-banner-title {
+    max-width: 960px;
+    font-size: 80px;
+    line-height: 1.2;
+    color: $white;
+  }
+
+  .industry-banner-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+
+    @include mq(tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .industry-banner-desc {
+    max-width: 520px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+  }
+
+  .industry-banner-footer .btn {
+    align-self: flex-start;
+  }
+}
