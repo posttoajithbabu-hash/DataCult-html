@@ -1,0 +1,50 @@
+.form-group {
+	margin-bottom: 20px;
+
+
+	.form-label {
+		line-height: 17px;
+		color: #FFFFFF;
+		margin-bottom: 8px;
+	}
+
+	.form-control {
+		height: auto;
+		width: 100%;
+		letter-spacing: -0.1px;
+		color: $white;
+		padding: 15px 20px;
+		background: transparent;
+		border: 1px solid rgba(#8e8e8e, 0.4);
+		border-radius: 8px;
+		transition: 0.3s;
+
+		@include mq(phone) {
+			font-size: 1.3rem;
+			padding: 15px 16px;
+		}
+
+		&:focus {
+			border-color: #38BBAB;
+		}
+
+		&::placeholder {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 130%;
+			color: $white;
+
+			@include mq(phone) {
+				font-size: 1.3rem;
+			}
+		}
+	}
+
+	textarea {
+		&.form-control {
+			height: 120px;
+			border-radius: 8px;
+			padding: 16px;
+		}
+	}
+}

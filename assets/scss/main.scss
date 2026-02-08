@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// Configuration and helpers
+@import 'helpers/helpers';
+
+// Base stuff
+@import 'base/base';
+
+// Utilities
+@import 'utilities/utilities';
+
+// Layout-related sections
+@import 'layout/header', 'layout/footer';
+
+// Components
+@import 'components/card', 'components/common', 'components/popup', 'components/form-controls', 'components/accordian';
+
+// Pages specific
+@import 'pages/home', 'pages/about', 'pages/blog', 'pages/blog-inner', 'pages/case-study';

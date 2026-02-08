@@ -1,0 +1,27 @@
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+
+	@include mq(desktop-wide) {
+		max-width: 1310px;
+		padding: 0 30px;
+
+	}
+
+	@include mq(desktop) {
+		padding: 0 30px;
+	}
+
+	@include mq(phone) {
+		padding: 0 15px;
+	}
+
+	&-fluid {
+		padding: 0 40px;
+
+		@include mq(tablet) {
+			padding: 0 15px;
+		}
+	}
+}

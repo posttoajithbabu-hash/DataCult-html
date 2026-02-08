@@ -1,0 +1,69 @@
+// main {
+//   padding-top: 119px;
+// }
+.common-link {
+  font-weight: 600;
+  padding-bottom: 1px;
+  color: #00ABEC;
+  border-bottom: 1px solid #00ABEC;
+  transition: all 0.3s;
+
+  @include mq(phone) {
+    font-size: 14px;
+
+  }
+
+  &:hover {
+    border-bottom: none;
+
+  }
+}
+
+.yellow-color {
+  color: #E8CC69;
+}
+
+.green-color {
+  color: #28D448;
+}
+
+.purple-color {
+  color: #CE6CEF;
+}
+
+
+
+
+.feature-disc {
+  min-width: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  margin-right: 16px;
+  border-radius: 100%;
+  border: 2px solid #8DCA9B;
+}
+
+// news-info-box
+.news-info-box {
+
+  .news-info {
+    color: #00CC60;
+
+    &-dot {
+      width: 5px;
+      height: 5px;
+      margin: 0 8px;
+      background-color: #00CC60;
+      border-radius: 50%;
+    }
+
+    &-date {
+      color: #00CC60;
+    }
+
+    &-auth {
+      color: #00CC60;
+    }
+  }
+}

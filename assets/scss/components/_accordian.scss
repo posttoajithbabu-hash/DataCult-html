@@ -1,0 +1,310 @@
+.accordian-content {
+	.fade {
+		opacity: 0;
+		transition: opacity 4s ease-in-out;
+	}
+
+	.fade.active {
+		opacity: 1;
+	}
+}
+
+.cycle-tab-item {
+	position: relative;
+	display: flex;
+	transition: all 0.4s;
+	overflow: hidden;
+
+	@include mq(tablet) {
+		width: 100%;
+	}
+
+	&:hover {
+		box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.08);
+		border-radius: 8px;
+
+		@include mq(tablet) {
+			box-shadow: none;
+			border-radius: 0;
+		}
+
+		.progress-bar {
+			display: none;
+		}
+	}
+
+	&.active {
+
+		background: #16181A;
+		border: 1.5px solid #282A2B;
+		border-radius: 12px;
+		margin-bottom: 30px;
+
+		.accordian-media {
+			border-bottom: none;
+		}
+
+		.accordian-desc {
+			height: 100%;
+			max-height: max-content;
+			visibility: visible;
+		}
+
+		.accordian-head {
+			// font-weight: 800;
+			color: #00CC60;
+		}
+
+		.accordian-item::after {
+			animation-play-state: running;
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+
+			.progress-bar {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
+	.progress-bar {
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s;
+	}
+
+	&.active {
+
+		.progress-bar {
+			opacity: 1;
+			visibility: visible;
+			width: 100%;
+			height: 1.5px;
+			background-color: transparent;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+
+			@include mq(tablet) {
+				top: 0;
+			}
+		}
+
+		.progress-line {
+			height: 100%;
+			width: 0%;
+			background-color: #217C5B;
+			position: absolute;
+			animation: progress-animation 10s linear forwards;
+		}
+
+		@keyframes progress-animation {
+			0% {
+				width: 0%;
+			}
+
+			100% {
+				width: 100%;
+			}
+		}
+
+		.progressbar-svg-circle {
+			display: block;
+		}
+
+
+	}
+
+
+}
+
+
+.accordian-content {
+
+	@include mq(mobile) {
+		padding-top: 26px;
+	}
+
+	.accordian-wrapper {
+		// min-width: 485px;
+		max-width: 500px;
+		margin-right: 50px;
+		border-bottom: none;
+
+		@include mq(tablet) {
+			min-width: 100%;
+			max-width: 100%;
+		}
+
+		.cycle-tab-item:last-child .accordian-media {
+			border-bottom: none;
+		}
+	}
+
+	.accordian-media {
+		width: 100%;
+		padding: 20px 32px;
+		border: none;
+		display: grid;
+
+		&:hover {
+			border-color: transparent;
+		}
+
+		&:focus {
+			border-color: transparent;
+		}
+
+		@include mq(phone) {
+			padding: 10px 16px;
+
+		}
+	}
+
+	.accordian-text {
+		min-width: 0;
+		flex: 1 1 0;
+		display: flex;
+		justify-content: flex-end;
+
+		@include mq(tablet) {
+			display: none;
+		}
+
+		.tab-text {
+			max-width: 610px;
+		}
+
+
+	}
+
+	.accordian-image {
+		min-width: 0;
+		flex: 1 1 0;
+		display: flex;
+		justify-content: flex-end;
+
+		@include mq(tablet) {
+			display: none;
+		}
+
+
+		.tab-image {
+			max-width: 610px;
+		}
+
+	}
+
+	.tab-content > .tab-pane {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	.accordian-item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8L12 16L20 8' stroke='%237F8081' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			right: 0;
+			transition: 0.3s;
+		}
+
+		.icon {
+			width: 44px;
+			height: 44px;
+			margin-right: 20px;
+
+			@include mq(phone) {
+				width: 30px;
+				height: 30px;
+
+			}
+		}
+
+		.accordian-head {
+			font-weight: 800;
+		}
+	}
+
+	.accordian-item.active::after {
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.24121 6.021L6.2408 0.999833L11.2412 6.021' stroke='%230A2540' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	}
+
+	.accordian-desc {
+		height: 0;
+		max-height: 0;
+		margin-top: 12px;
+		overflow: hidden;
+		transition: 0.3s;
+		// margin-top: -15px;
+		visibility: hidden;
+
+		.accrd-desc-txt {
+			max-width: 425px;
+			// padding-top: 12px;
+			color: $white;
+			opacity: 0.7;
+
+			@include mq(tablet) {
+				max-width: 100%;
+				padding-bottom: 20px;
+			}
+
+			@include mq(mobile) {
+				margin-left: 78px;
+				font-size: 13px;
+			}
+		}
+
+		.feature-list {
+			display: none;
+
+			@include mq(tablet) {
+				display: block;
+				// width: 82%;
+				// margin: auto;
+			}
+
+			@include mq(mobile) {
+				width: 100%;
+			}
+		}
+
+		.accordian-image-box {
+			display: none;
+			margin-top: 30px;
+
+			img {
+				margin: 0 auto;
+			}
+
+			@include mq(tablet) {
+				display: block;
+				// width: 82%;
+				// margin: auto;
+			}
+
+			@include mq(mobile) {
+				width: 100%;
+			}
+		}
+	}
+
+	.blog-link-accrd {
+		position: relative;
+	}
+}
