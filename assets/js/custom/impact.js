@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
             ease: 'none',
             scrollTrigger: {
               trigger: wrapper,
-              start: 'top 50px',
+              start: 'top 30px',
               end: () => `+=${scrollDistance}`,
               pin: true,
               scrub: true,

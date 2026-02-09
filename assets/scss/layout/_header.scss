@@ -7,79 +7,59 @@
   width: 100%;
   transition: all 0.4s;
   background-color: #04314B;
-
-
+  .logo-img-color {
+    display: none;
+  }
   &.scrolled {
-    // background-color: #103747;
+    background-color: #fff;
     transition: all 0.4s;
-    // .header-wrapper {
-    //   padding: 0 105px 0 105px;
-
-    //   // @include mq(tablet) {
-    //   //   padding: 15px;
-    //   // }
-
-    // }
-    @include mq(tablet) {
-      background: #00070b;
-
-
+    .header-wrapper {
+      padding: 15px 0px;
     }
-
-    // .logo-box {
-    //   min-width: 150px;
-    //   max-width: 150px;
-
-    //   @include mq(tablet) {
-    //     min-width: 130px;
-    //     max-width: 130px;
-    //   }
-    // }
-
-    // .header-navbar .header-list .nav-link {
-    //   padding: 36px 0 30px 0;
-    // }
+    .logo-img-color {
+      display: block;
+    }
+    .logo-img {
+      display: none;
+    }
     .nav-items .nav-items-list .nav-link {
       padding: 0;
+      color: #04314B;
     }
-
+    .header-cta {
+      &:hover {
+        background: #04314B;
+        color: #fff;
+      }
+    }
   }
-
+  .nav-items .nav-items-list {
+    color: #FFFFFF;
+    .nav-link {
+      padding: 0;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
   .header-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 24px 0px;
     transition: all 0.3s;
-
     @include mq(tablet) {
       padding: 15px;
 
 
     }
-
-    // @include mq(phone) {
-    //   padding: 15px;
-
-    // }
   }
-
   nav {
     width: 100%;
-    // padding: 24px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-
-    // @include mq(tablet) {
-    //   padding: 20px 0;
-    // }
-
-    // @include mq(mobile) {
-    //   padding: 15px 0;
-    // }
   }
-
   .logo-box {
     min-width: 185px;
     max-width: 185px;
@@ -101,9 +81,29 @@
     font-weight: 600;
     color: $white;
   }
-
-
-
+  .header-submenu-wrapper{
+    position: absolute;
+    top: 40px;
+    background: #fff;
+    padding: 14px 24px;
+    width: 370px;
+    border-radius: 12px;
+    left: -45px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    display: none ;
+    .menu-item {
+      display: block;
+      padding: 10px 0px;
+      border-bottom: 1px solid #05314b26;
+      &:last-child {
+        border-bottom: none;
+       }
+       &:hover {
+        color: $green;
+       }
+    }
+  }
 }
 
 
@@ -119,7 +119,15 @@
     transition: opacity 0.15s linear 0.15s, transform 0.3s ease-in-out 0.15s;
     list-style: none;
     margin: 0 20px;
-
+    padding: 12px 0px;
+    &:hover {
+      .nav-link {
+        color: #0CFE74;
+      }
+      .header-submenu-wrapper {
+        display: block;
+      }
+    }
     .nav-link {
       line-height: 1;
       padding: 0;
@@ -208,6 +216,11 @@
   border-radius: 999px;
   font-size: 16px;
   font-weight: 500;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover {
+    background: $white;
+  }
 }
 
 .nav-items .nav-items-list a:hover,

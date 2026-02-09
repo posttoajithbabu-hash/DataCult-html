@@ -16,6 +16,12 @@
       padding: 110px 0 60px 0;
 
     }
+    .btn-primary {
+      &:hover {
+        color: #04314B;
+        background: #fff;
+      }
+    }
   }
 
   .home-banner-text-content {
