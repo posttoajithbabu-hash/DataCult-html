@@ -51,6 +51,7 @@
     line-height: 1.5;
     letter-spacing: 0;
     text-align: left;
+    display: none;
   }
 
   .about-banner-actions {
@@ -220,4 +221,14 @@
       width: 160px;
     }
   }
+}
+
+// impact-section
+.impact-section {
+  
+
+  .impact-content-about {
+    max-width: 690px;
+  }
+
 }
