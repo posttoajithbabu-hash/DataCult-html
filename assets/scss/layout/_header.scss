@@ -15,6 +15,12 @@
     transition: all 0.4s;
     .header-wrapper {
       padding: 15px 0px;
+      @include mq(tablet) {
+        padding: 15px;
+        nav .hamburger .bar {
+          background-color: #04314B;
+        }
+      }
     }
     .logo-img-color {
       display: block;
@@ -49,8 +55,6 @@
     transition: all 0.3s;
     @include mq(tablet) {
       padding: 15px;
-
-
     }
   }
   nav {
@@ -318,9 +322,7 @@ nav .hamburger div:nth-child(2) {
       }
 
       &.open {
-        // clip-path: circle(120vh at 65.5% 5.3%);
         padding: 50px 20px 20px 60px;
-        border-top: 1px solid #ccc;
         height: 100vh;
         opacity: 1;
         visibility: visible;
@@ -330,6 +332,10 @@ nav .hamburger div:nth-child(2) {
         max-width: 100%;
         align-items: flex-start;
         justify-content: flex-start;
+        background-color: #fff;
+        .nav-items .nav-items-list {
+          color: #04314B;
+        }
       }
 
       .nav-items-list {
