@@ -1190,7 +1190,45 @@ color: rgba(255, 255, 255, 0.5);
   }
 }
 
-
+.technology-section {
+  background-color: #ffffff;
+  padding: 120px 0 50px 0;
+  .technology-eyebrow {
+    font-size: 28px;
+    color: rgba(4, 49, 75, .6);
+    margin-bottom: 20px;
+  }
+  .technology-title {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    vertical-align: middle;
+    color: #04314b;
+  }
+  .technology-desc {
+    margin-top: 20px;
+    color: #426478;
+  }
+  .technology-content {
+    max-width: 800px;
+  }
+  .technology-logo-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    .technology-logo-item {
+      max-width: calc(100% / 6);
+      width: 100%;
+      padding: 15px 10px;
+      box-sizing: border-box;
+      img {
+        filter: grayscale(100%) brightness(0);
+      }
+    }
+  }
+}
 // common
 .main-title {
   padding: 8px 0 24px 0;
