@@ -46,15 +46,22 @@ $(document).ready(function () {
 
 
   // Mobile submenu toggle: open submenu when nav item is clicked
-  $('.nav-items').on('click', '.nav-items-list > .nav-link', function (e) {
-    var $link = $(this);
-    var $parent = $link.parent();
-    // check for either type of submenu container (desktop .sub-menu-box or .header-submenu-wrapper)
-    var hasSubmenu = $parent.find('.sub-menu-box').length || $parent.find('.header-submenu-wrapper').length;
-    if ($(window).width() <= 767 && hasSubmenu) {
+  // Handle clicks on nav items (robust for div/button/anchor structures)
+  $('.nav-items').on('click', function (e) {
+    if ($(window).width() > 767) return;
+    var $clickedList = $(e.target).closest('.nav-items-list');
+    if ($clickedList.length === 0) return;
+
+    // If click happened inside the submenu or on a submenu link, ignore (let link navigate)
+    if ($(e.target).closest('.header-submenu-wrapper, .sub-menu-box, .menu-item').length) {
+      return;
+    }
+
+    // If this list has a submenu, toggle it
+    var hasSubmenu = $clickedList.find('.header-submenu-wrapper').length || $clickedList.find('.sub-menu-box').length;
+    if (hasSubmenu) {
       e.preventDefault();
-      // toggle this submenu, close siblings
-      $parent.toggleClass('submenu-open').siblings().removeClass('submenu-open');
+      $clickedList.toggleClass('submenu-open').siblings().removeClass('submenu-open');
     }
   });
 

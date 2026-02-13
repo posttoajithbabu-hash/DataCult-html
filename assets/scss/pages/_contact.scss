@@ -45,6 +45,10 @@
   line-height: 1.2;
   color: $white;
   margin-bottom: 16px;
+  
+  @include mq(phone) {
+    font-size: 40px;
+  }
 }
 
 .contact-banner-desc {
