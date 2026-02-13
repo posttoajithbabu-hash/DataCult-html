@@ -38,7 +38,7 @@
     color: rgba(255, 255, 255, 0.7);
 
     @include mq(phone) {
-      font-size: 22px;
+      font-size: 16px;
     }
   }
 
@@ -47,6 +47,10 @@
     font-size: 66px;
     line-height: 1.2;
     color: $white;
+
+    @include mq(phone) {
+      font-size: 40px;
+    }
   }
 
   .industry-banner-footer {
@@ -76,11 +80,19 @@
 .industry-problems-section {
   padding: 100px 0;
   background: $white;
+
+  @include mq(phone) {
+    padding: 56px 0;
+  }
 }
 
 .industry-deliver-section {
   padding: 100px 0;
   background: #FFFAF6;
+
+  @include mq(phone) {
+    padding: 56px 0;
+  }
 }
 
 .industry-deliverables-section {
@@ -123,6 +135,10 @@
   display: grid;
   gap: 56px;
   flex: 1;
+  
+  @include mq(phone) {
+    padding: 24px;
+  }
 }
 
 .industry-deliverables-item {
@@ -199,6 +215,12 @@
   display: flex;
   gap: 72px;
   flex-wrap: wrap;
+  
+  @include mq(phone) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
 }
 
 .industry-strategy-item {
@@ -224,12 +246,26 @@
     height: 56px;
     display: block;
   }
+  
+  @include mq(phone) {
+    width: 100px;
+    height: 100px;
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
 }
 
 .industry-strategy-text {
   font-size: 20px;
   color: $white;
   text-align: center;
+  
+  @include mq(phone) {
+    font-size: 18px;
+  }
 }
 
 .industry-section-head {
@@ -263,6 +299,10 @@
   border: 1px solid #E7ECEF;
   border-radius: 4px;
   padding: 40px;
+
+  @include mq(phone) {
+    padding: 24px;
+  }
 }
 
 .industry-problem-icon {
@@ -291,9 +331,7 @@
   line-height: 1.5;
 }
 
-.industry-deliver-card {
-  // background: $white;
-}
+/* removed empty .industry-deliver-card ruleset */
 
 .industry-deliver-image {
   border-radius: 12px;
@@ -316,6 +354,6 @@
 
 .industry-deliver-desc {
   color: #426478;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 }

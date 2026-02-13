@@ -153,6 +153,11 @@
         filter: none;
       }
     }
+
+    @include mq(phone) {
+      min-width: 175px;
+      height: 80px;
+    }
   }
 
 
@@ -533,6 +538,10 @@
     line-height: 140%;
     letter-spacing: 0%;
 
+    @include mq(phone) {
+      font-size: 18px;
+    }
+
   }
   .impact-wrapper {
     position: relative;
@@ -757,10 +766,15 @@ color: rgba(255, 255, 255, 0.5);
     position: relative;
   }
 
+ 
   .testimonial-card {
     background: #FFF6F0;
     border-radius: 16px;
     padding: 56px;
+
+    @include mq(phone) {
+      padding: 24px;
+    }
   }
 
   .testimonial-quote {
@@ -1132,7 +1146,7 @@ color: rgba(255, 255, 255, 0.5);
   }
 
   .case-study-card-desc {
-    font-size: 14px;
+    font-size: 16px;
     color: #426478;
     line-height: 1.5;
   }
@@ -1197,13 +1211,13 @@ color: rgba(255, 255, 255, 0.5);
     font-size: 28px;
     color: rgba(4, 49, 75, .6);
     margin-bottom: 20px;
+    
+    @include mq(phone) {
+      font-size: 22px;
+    }
   }
   .technology-title {
-    font-weight: 600;
-    font-size: 56px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-    vertical-align: middle;
+    /* use heading-style-h2 for typography (keeps color only here) */
     color: #04314b;
   }
   .technology-desc {
@@ -1249,4 +1263,11 @@ color: rgba(255, 255, 255, 0.5);
 
 .testimonial-section .owl-nav {
       top: -100px !important;
+      @include mq(phone) {
+    
+       
+          display: none !important;
+        
+      }
+    
 }

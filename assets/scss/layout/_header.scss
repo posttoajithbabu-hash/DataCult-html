@@ -11,26 +11,23 @@
     display: none;
   }
   &.scrolled {
-    background-color: #fff;
+    // background-color: #fff;
     transition: all 0.4s;
     .header-wrapper {
       padding: 15px 0px;
       @include mq(tablet) {
         padding: 15px;
-        nav .hamburger .bar {
-          background-color: #04314B;
-        }
       }
     }
-    .logo-img-color {
-      display: block;
-    }
-    .logo-img {
-      display: none;
-    }
+    // .logo-img-color {
+    //   display: block;
+    // }
+    // .logo-img {
+    //   display: none;
+    // }
     .nav-items .nav-items-list .nav-link {
       padding: 0;
-      color: #04314B;
+      // color: #04314B;
     }
     .header-cta {
       &:hover {
@@ -107,6 +104,51 @@
         color: $green;
        }
     }
+    
+    @include mq(phone) {
+      /* make submenu non-absolute on small screens so it flows with content */
+      position: static;
+      width: auto;
+      left: auto;
+      top: auto;
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: block;
+      background: transparent;
+      border: none;
+    }
+  }
+}
+
+/* Mobile submenu behavior: hidden by default, shown when parent has .submenu-open */
+@include mq(phone) {
+  /* hide submenus completely (no overlay or clickable area) */
+  .sub-menu-box,
+  .header-submenu-wrapper {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* show only when parent has submenu-open */
+  .nav-items-list.submenu-open .sub-menu-box,
+  .nav-items-list.submenu-open .header-submenu-wrapper {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+  }
+
+  /* keep header submenu visually transparent by default */
+  .header-submenu-wrapper {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
   }
 }
 
@@ -133,6 +175,19 @@
       }
       .header-submenu-wrapper {
         display: block;
+      }
+    }
+    
+    @include mq(phone) {
+      .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .nav-caret {
+        margin-top: 0;
+        order: 2;
       }
     }
     .nav-link {
@@ -210,6 +265,25 @@
 
 
         // }
+      }
+
+      @include mq(phone) {
+        position: static;
+        max-width: none;
+        min-width: auto;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin-top: 0;
+        border-radius: 8px;
+        padding: 12px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+
+        .child-item {
+          padding: 12px;
+        }
       }
 
 
@@ -349,10 +423,15 @@ nav .hamburger div:nth-child(2) {
         max-width: 100%;
         align-items: flex-start;
         justify-content: flex-start;
-        background-color: #fff;
+        background-color: #04314B;
         .nav-items .nav-items-list {
-          color: #04314B;
+          color: #fff;
         }
+        /* make the opened mobile nav scrollable */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        max-height: 100vh;
+        overscroll-behavior: contain;
       }
 
       .nav-items-list {
@@ -374,5 +453,17 @@ nav .hamburger div:nth-child(2) {
 
 
     }
+  }
+}
+
+/* Ensure submenu menu-items are white on small screens */
+@include mq(phone) {
+  .header-submenu-wrapper .menu-item,
+  .sub-menu-box .menu-item {
+    color: #fff;
+  }
+  .header-submenu-wrapper .menu-item a,
+  .sub-menu-box .menu-item a {
+    color: #fff;
   }
 }

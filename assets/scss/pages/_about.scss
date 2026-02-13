@@ -79,6 +79,10 @@
     line-height: 1.6;
     letter-spacing: -0.02em;
     text-align: center;
+
+    @include mq(phone) {
+      font-size: 24px;
+    }
   }
 
   .about-banner-cards {
@@ -90,6 +94,10 @@
     @include mq(tablet) {
       grid-template-columns: 1fr;
     }
+    
+    @include mq(phone) {
+      margin-top: 40px;
+    }
   }
 
   .about-banner-card {
@@ -97,6 +105,10 @@
     border-radius: 16px;
     padding: 56px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+    @include mq(phone) {
+      padding: 24px;
+    }
   }
 
   .about-banner-card-icon {
@@ -223,6 +235,13 @@
 
     .founder-card-media img {
       width: 160px;
+    }
+  }
+ 
+  @include mq(phone) {
+    .founder-card-media img {
+      width: 100%;
+      height: auto;
     }
   }
 }

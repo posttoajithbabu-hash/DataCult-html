@@ -38,7 +38,7 @@
     color: rgba(255, 255, 255, 0.7);
 
     @include mq(phone) {
-      font-size: 22px;
+      font-size: 16px;
     }
   }
 
@@ -47,6 +47,10 @@
     font-size: 66px;
     line-height: 1.2;
     color: $white;
+
+    @include mq(phone) {
+      font-size: 40px;
+    }
   }
 
   .service-banner-footer {
@@ -77,6 +81,10 @@
 .service-cards-section {
   padding: 80px 0;
   background: $white;
+
+  @include mq(phone) {
+    padding: 56px 0;
+  }
 
   .service-cards-head {
     max-width: 520px;
