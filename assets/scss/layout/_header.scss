@@ -66,15 +66,7 @@
     max-width: 185px;
     transition: all 0.4s;
 
-    @include mq(phone) {
-      min-width: 140px;
-      max-width: 140px;
-    }
-
-    @include mq(phone-sm) {
-      min-width: 110px;
-      max-width: 110px;
-    }
+   
   }
 
   .logo-text {
