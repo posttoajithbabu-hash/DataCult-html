@@ -124,6 +124,14 @@
     display: block;
     object-fit: cover;
   }
+
+  /* Ensure any images inside blog content are full width and block */
+  .blog-inner-body img,
+  .blog-inner-content-section img,
+  .blog-inner-media img {
+    width: 100%;
+    display: block;
+  }
 }
 
 .blog-inner-content-section {

@@ -163,6 +163,12 @@
     object-fit: cover;
   }
 
+  /* Ensure any other blog images are full width and block */
+  .blog-card img {
+    width: 100%;
+    display: block;
+  }
+
   .blog-card-meta {
     display: flex;
     gap: 12px;
