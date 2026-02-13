@@ -36,6 +36,10 @@
     text-transform: uppercase;
     margin-bottom: 16px;
     color: rgba(255, 255, 255, 0.7);
+
+    @include mq(phone) {
+      font-size: 22px;
+    }
   }
 
   .industry-banner-title {

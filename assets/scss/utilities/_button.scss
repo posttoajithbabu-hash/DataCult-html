@@ -14,8 +14,8 @@
 	
 
 	@include mq(phone) {
-		padding: 20px 18px;
-
+		font-size: 18px;
+		padding: 16px 18px;
 	}
 
 	&:disabled,

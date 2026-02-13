@@ -16,7 +16,11 @@
   .case-study-page-eyebrow {
     font-size: 18px;
     color: rgba(4, 49, 75, 0.6);
-    margin-bottom: 12px;  
+    margin-bottom: 12px;
+
+    @include mq(phone) {
+      font-size: 22px;
+    }
   }
 
   .case-study-page-title {
@@ -101,6 +105,10 @@
     letter-spacing: 0.08em;
     color: rgba(4, 49, 75, 0.7);
     margin-bottom: 12px;
+
+    @include mq(phone) {
+      font-size: 22px;
+    }
   }
 
   .case-study-title {

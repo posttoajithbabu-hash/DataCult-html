@@ -143,6 +143,10 @@
     vertical-align: middle;
     color: $primary-text;
     margin-bottom: 20px;
+
+    @include mq(phone) {
+      font-size: 22px;
+    }
   }
 
   .founder-title {

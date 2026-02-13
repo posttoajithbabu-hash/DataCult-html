@@ -34,6 +34,10 @@
       font-size: 20px;
       color: rgba(255, 255, 255, 0.75);
       margin-top: 32px;
+
+      @include mq(phone) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -196,6 +200,10 @@
     font-size: 28px;
     color: rgba(4, 49, 75, 0.6);
     margin-bottom: 12px;
+
+    @include mq(phone) {
+      font-size: 22px;
+    }
   }
 
   .engage-title {
@@ -225,6 +233,11 @@
     padding: 40px 40px 40px 60px;
     border-bottom: 1px solid #e6e6e6;
     position: relative;
+
+    @include mq(phone) {
+      padding: 24px;
+    }
+
     &::after {
       content: "";
       width: 150px;
@@ -476,6 +489,10 @@
     line-height: 110.00000000000001%;
     letter-spacing: -2%;
     vertical-align: middle;
+
+    @include mq(phone) {
+      font-size: 22px;
+    }
     color: #CCCED1;
     margin-bottom: 16px;
   }
@@ -531,12 +548,14 @@
     overflow: hidden;
     width: 100%;
     &-wrapper {
-    display: flex;
+      display: flex;
       gap: 24px;
       align-items: center;
       margin-top: 30px;
-      // overflow: auto;
-    
+
+      @include mq(phone) {
+        flex-direction: column;
+      }
     }
     &-img {
       position: absolute;
@@ -580,7 +599,11 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 110.00000000000001%;
-    color: rgba(255, 255, 255, 0.8);    
+    color: rgba(255, 255, 255, 0.8);
+
+    @include mq(phone) {
+      font-size: 22px;
+    }    
 
     margin-bottom: 16px;
   }
@@ -606,6 +629,10 @@
   .industries-head {
     position: sticky;
     top: 100px;
+
+    @include mq(phone) {
+      position: static;
+    }
   }
   .industry-card {
     position: sticky;
@@ -620,6 +647,10 @@
       position: static;
       flex-direction: column;
       padding: 24px;
+    }
+
+    @include mq(phone) {
+      position: static;
     }
   }
 
@@ -636,6 +667,11 @@
     flex: 1;
     min-width: 0;
     padding: 32px 40px;
+
+    @include mq(phone) {
+      padding: 0;
+      gap: 32px;
+    }
   }
 
   .industry-title {
@@ -838,7 +874,10 @@ color: rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
     gap: 48px;
+    @include mq(phone) {
+      gap: 32px;
 
+    }
     .faq-head {
       padding-bottom: 12px;
     }
@@ -852,6 +891,10 @@ color: rgba(255, 255, 255, 0.5);
       flex-direction: column;
       padding: 48px 24px;
       border-bottom: 1px solid #CCCCCC;
+
+      @include mq(phone) {
+        padding: 24px 6px;
+      }
 
       &.active {
         background: #FFFAF6;
@@ -871,9 +914,11 @@ color: rgba(255, 255, 255, 0.5);
       font-weight: 600;
       font-size: 24px;
       line-height: 130%;
-      letter-spacing: 0%;
       color: $primary-text;
-      
+
+      @include mq(phone) {
+        font-size: 20px;
+      }
     }
 
     .accordian-head {
@@ -894,6 +939,9 @@ color: rgba(255, 255, 255, 0.5);
       line-height: 150%;
       letter-spacing: 0;
 
+      @include mq(phone) {
+        font-size: 18px;
+      }
     }
 
     .accordian-icon {
@@ -905,6 +953,17 @@ color: rgba(255, 255, 255, 0.5);
       border-radius: 999px;
       background: $green;
       flex: 0 0 42px;
+
+      @include mq(phone) {
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
+
+        &::before,
+        &::after {
+          width: 16px;
+        }
+      }
     }
 
     .accordian-icon::before,
@@ -994,6 +1053,10 @@ color: rgba(255, 255, 255, 0.5);
     font-size: 28px;
     color: rgba(4, 49, 75, 0.6);
     margin-bottom: 20px;
+
+    @include mq(phone) {
+      font-size: 22px;
+    }
   }
 
   .case-study-title {
@@ -1098,7 +1161,10 @@ color: rgba(255, 255, 255, 0.5);
     padding: 72px 96px 210px 96px;
     border-radius: 4px;
     text-align: center;
-  
+
+    @include mq(phone) {
+      padding: 60px 24px;
+    }
   }
 .cta-content-wrap{
   max-width: 680px;

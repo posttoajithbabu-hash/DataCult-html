@@ -103,35 +103,42 @@
 
 .heading-style-h1 {
   font-weight: 500;
-
   font-size: 66px;
-  line-height: 110%;
+  line-height: 120%;
   letter-spacing: 0;
+
+  @include mq(phone) {
+    font-size: 40px;
+  }
 }
 
 .heading-style-h2 {
   font-weight: 600;
-
   font-size: 56px;
   line-height: 120%;
   letter-spacing: -0.02em;
   vertical-align: middle;
+
+  @include mq(phone) {
+    font-size: 36px;
+  }
 }
 
 .heading-style-h3 {
- font-weight: 600;
-font-style: SemiBold;
-font-size: 48px;
-line-height: 57px;
-letter-spacing: 0%;
-text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
 
-
+  @include mq(phone) {
+    font-size: 32px;
+  }
 }
+
 .heading-style-h4 {
   font-weight: 500;
   font-size: 32px;
-  line-height: 40px;
+  line-height: 120%;
   letter-spacing: -0.02em;
 }
 
