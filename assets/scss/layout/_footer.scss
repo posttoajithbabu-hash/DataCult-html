@@ -80,7 +80,7 @@
 
   .footer-links {
     display: flex;
-    gap: 100px;
+    gap: 56px;
   }
 
   .footer-inner,
@@ -122,6 +122,20 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+
+    &.footer-list-services {
+      max-width: 300px;
+    }
+
+    .footer-list-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 4px;
+      list-style: none;
+    }
 
     .list-items {
     
