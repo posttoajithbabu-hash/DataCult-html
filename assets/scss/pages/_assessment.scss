@@ -1,0 +1,276 @@
+// Assessment page - 90-second questionnaire
+.assessment-banner-section {
+  padding: 80px 0 48px;
+  background-color: #053955;
+  background-image: url(../images/contact-banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+}
+
+.assessment-banner-content {
+  max-width: 720px;
+}
+
+.assessment-banner-eyebrow {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #CCCED1;
+  margin-bottom: 16px;
+}
+
+.assessment-banner-title {
+  font-size: 42px;
+  line-height: 1.2;
+  color: $white;
+  margin-bottom: 16px;
+
+  @include mq(phone) {
+    font-size: 28px;
+  }
+}
+
+.assessment-banner-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.assessment-progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.assessment-progress-track {
+  flex: 1;
+  max-width: 200px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.assessment-progress-bar {
+  height: 100%;
+  background: $green;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.assessment-progress-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+
+  #currentQuestion {
+    color: $white;
+  }
+}
+
+.assessment-form-section {
+  padding: 48px 0 80px;
+  background: $white;
+}
+
+.assessment-form {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.assessment-step {
+  display: none;
+  animation: assessmentFadeIn 0.3s ease;
+
+  &.active {
+    display: block;
+  }
+}
+
+@keyframes assessmentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.assessment-question-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $primary-text;
+  margin-bottom: 8px;
+
+  @include mq(phone) {
+    font-size: 20px;
+  }
+}
+
+.assessment-question-desc {
+  font-size: 16px;
+  color: #7E7E84;
+  margin-bottom: 24px;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.assessment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.assessment-options-single .assessment-option,
+.assessment-options-multi .assessment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 1px solid #E3E5E8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+
+  &:hover {
+    border-color: #4A7E9B;
+    background: rgba(74, 126, 155, 0.04);
+  }
+
+  input:checked + .assessment-option-label,
+  input:focus-visible + .assessment-option-label {
+    font-weight: 500;
+  }
+}
+
+.assessment-option input[type="radio"],
+.assessment-option input[type="checkbox"] {
+  margin: 0;
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: #4A7E9B;
+  cursor: pointer;
+}
+
+.assessment-option-label {
+  font-size: 16px;
+  color: $primary-text;
+  line-height: 1.4;
+}
+
+.assessment-option input:checked ~ .assessment-option-label {
+  font-weight: 600;
+}
+
+.assessment-option:has(input:checked) {
+  border-color: #4A7E9B;
+  background: rgba(74, 126, 155, 0.06);
+}
+
+.assessment-select-vertical-msg {
+  color: #7E7E84;
+  font-style: italic;
+  padding: 24px;
+}
+
+.assessment-option-other {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px dashed #E3E5E8;
+}
+
+.assessment-input-other {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid #E3E5E8;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: $base-font-family;
+}
+
+.assessment-contact-fields {
+  display: grid;
+  gap: 20px;
+  max-width: 480px;
+}
+
+.assessment-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $primary-text;
+  }
+
+  input {
+    padding: 12px 14px;
+    border: 1px solid #E3E5E8;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: $base-font-family;
+
+    &::placeholder {
+      color: #B2B5B6;
+    }
+  }
+}
+
+.assessment-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #E7ECEF;
+}
+
+.assessment-btn-prev:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.assessment-success {
+  padding: 80px 0;
+  background: $white;
+}
+
+.assessment-success-card {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px;
+  background: #F8FAFB;
+  border-radius: 16px;
+  border: 1px solid #E7ECEF;
+}
+
+.assessment-success-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: $primary-text;
+  margin-bottom: 16px;
+}
+
+.assessment-success-desc {
+  font-size: 18px;
+  color: #7E7E84;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.assessment-error {
+  font-size: 14px;
+  color: #e74c3c;
+  margin-top: 8px;
+}

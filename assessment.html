@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90-Second Assessment | DataCult</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/owl.carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-wrapper">
+        <nav>
+          <div class="d-flex align-items-center">
+            <div class="logo-box">
+              <a href="index.html" class="logo-text">
+                <img class="logo-img" src="./assets/images/brand-logo.svg" alt="DataCult">
+              </a>
+            </div>
+          </div>
+          <div class="header-rgt d-flex align-items-center">
+            <ul class="nav-items">
+              <li class="nav-items-list">
+                <button type="button" class="nav-link d-block">Services <span class="nav-caret" aria-hidden="true"></span></button>
+                <div class="header-submenu-wrapper">
+                  <a href="service.html" class="menu-item">Strategy & Advisory</a>
+                  <a href="service.html" class="menu-item">Data Architecture, Engineering & Platforms</a>
+                  <a href="service.html" class="menu-item">Managed Services and Support</a>
+                  <a href="service.html" class="menu-item">Strategy & Advisory</a>
+                </div>
+              </li>
+              <li class="nav-items-list">
+                <button type="button" class="nav-link d-block">Industries <span class="nav-caret" aria-hidden="true"></span></button>
+                <div class="header-submenu-wrapper">
+                  <a href="industry.html" class="menu-item">Manufacturing</a>
+                  <a href="industry.html" class="menu-item">Construction (AEC)</a>
+                  <a href="industry.html" class="menu-item">Healthcare/Pharma</a>
+                  <a href="industry.html" class="menu-item">Financial Services</a>
+                  <a href="industry.html" class="menu-item">Retail & Logistics</a>
+                </div>
+              </li>
+              <li class="nav-items-list"><a href="about.html" class="nav-link d-block">About</a></li>
+              <li class="nav-items-list"><a href="case-study.html" class="nav-link d-block">Case Studies</a></li>
+              <li class="nav-items-list"><a href="blog.html" class="nav-link d-block">Blogs</a></li>
+              <li class="nav-items-list"><a href="assessment.html" class="nav-link d-block">Assessment</a></li>
+              <li class="nav-items-list"><a href="contact.html" class="nav-link d-block">Contact</a></li>
+            </ul>
+            <div class="header-btn-group">
+              <a class="btn header-cta" href="assessment.html">Take an Assessment</a>
+            </div>
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="assessment-banner-section">
+        <div class="container">
+          <div class="assessment-banner-content">
+            <p class="assessment-banner-eyebrow">90-Second Assessment</p>
+            <h1 class="assessment-banner-title">Get your data roadmap in under 2 minutes</h1>
+            <p class="assessment-banner-desc">Answer 9 quick questions. We'll deliver a tailored roadmap for your priority domain.</p>
+            <div class="assessment-progress">
+              <div class="assessment-progress-track">
+                <div class="assessment-progress-bar" id="progressBar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="9" style="width: 11%;"></div>
+              </div>
+              <span class="assessment-progress-text">Step <span id="currentQuestion">1</span> of 10</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment-form-section">
+        <div class="container">
+          <form id="assessmentForm" class="assessment-form">
+            <div class="assessment-step" data-step="1">
+              <h2 class="assessment-question-title">Q1. What is your vertical? <span class="required">*</span></h2>
+              <p class="assessment-question-desc">Select your industry</p>
+              <div class="assessment-options assessment-options-single">
+                <label class="assessment-option">
+                  <input type="radio" name="vertical" value="construction" required>
+                  <span class="assessment-option-label">Construction / Engineering</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="vertical" value="retail">
+                  <span class="assessment-option-label">Retail</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="vertical" value="manufacturing">
+                  <span class="assessment-option-label">Manufacturing / Chemicals</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="2">
+              <h2 class="assessment-question-title">Q2. Your role <span class="required">*</span></h2>
+              <p class="assessment-question-desc">What best describes your role?</p>
+              <div class="assessment-options assessment-options-single">
+                <label class="assessment-option">
+                  <input type="radio" name="role" value="ops_delivery" required>
+                  <span class="assessment-option-label">Ops / Delivery</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="role" value="finance_commercial">
+                  <span class="assessment-option-label">Finance / Commercial</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="role" value="it_apps">
+                  <span class="assessment-option-label">IT / Apps (ERP/Business Systems)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="role" value="data_bi">
+                  <span class="assessment-option-label">Data / BI / Analytics</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="role" value="project_controls">
+                  <span class="assessment-option-label">Project Controls / PMO</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="3">
+              <h2 class="assessment-question-title">Q3. What's the #1 outcome you want in the next 90 days? <span class="required">*</span></h2>
+              <p class="assessment-question-desc">Select your top priority</p>
+              <div class="assessment-options assessment-options-single">
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="reduce_manual_reporting" required>
+                  <span class="assessment-option-label">Reduce manual reporting time</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="faster_exception_handling">
+                  <span class="assessment-option-label">Faster exception handling (operational decisions)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="reduce_cost_leakage">
+                  <span class="assessment-option-label">Reduce cost leakage / margin risk</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="improve_forecasting">
+                  <span class="assessment-option-label">Improve forecasting accuracy</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="reduce_quality_issues">
+                  <span class="assessment-option-label">Reduce quality issues (scrap/rework/returns/defects)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="reduce_downtime">
+                  <span class="assessment-option-label">Reduce downtime / delays (uptime/schedule adherence)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="improve_compliance">
+                  <span class="assessment-option-label">Improve compliance / auditability</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="data_migration">
+                  <span class="assessment-option-label">Data migration</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="outcome" value="single_source_of_truth">
+                  <span class="assessment-option-label">Build single source of truth</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="4">
+              <h2 class="assessment-question-title">Q4. Choose the focus area <span class="required">*</span></h2>
+              <p class="assessment-question-desc">Vertical-specific options</p>
+              <div id="focusAreaOptions" class="assessment-options assessment-options-single">
+                <p class="assessment-select-vertical-msg">Please select your vertical in Q1 first.</p>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="5">
+              <h2 class="assessment-question-title">Q5. Which systems hold the key data today? <span class="required">*</span></h2>
+              <p class="assessment-question-desc">Select all that apply</p>
+              <div id="systemsOptions" class="assessment-options assessment-options-multi">
+                <label class="assessment-option">
+                  <input type="checkbox" name="systems" value="erp">
+                  <span class="assessment-option-label">ERP (SAP/Oracle/D365/Other)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="checkbox" name="systems" value="bi">
+                  <span class="assessment-option-label">BI (Power BI/Other)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="checkbox" name="systems" value="spreadsheets">
+                  <span class="assessment-option-label">Spreadsheets/manual exports</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="checkbox" name="systems" value="data_warehouse">
+                  <span class="assessment-option-label">Data warehouse/lake (if any)</span>
+                </label>
+                <div id="systemsVerticalAddons"></div>
+                <div class="assessment-option-other">
+                  <label class="assessment-option">
+                    <input type="checkbox" name="systems" value="other">
+                    <span class="assessment-option-label">Other</span>
+                  </label>
+                  <input type="text" id="systemsOther" class="assessment-input-other" placeholder="Specify other systems" style="display:none;">
+                </div>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="6">
+              <h2 class="assessment-question-title">Q6. Data connectivity today <span class="required">*</span></h2>
+              <p class="assessment-question-desc">How connected is your data?</p>
+              <div class="assessment-options assessment-options-single">
+                <label class="assessment-option">
+                  <input type="radio" name="connectivity" value="mostly_connected" required>
+                  <span class="assessment-option-label">Mostly connected (single place to query)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="connectivity" value="partially_connected">
+                  <span class="assessment-option-label">Partially connected (some joins exist)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="connectivity" value="siloed">
+                  <span class="assessment-option-label">Siloed (exports + manual joins)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="connectivity" value="not_sure">
+                  <span class="assessment-option-label">Not sure</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="7">
+              <h2 class="assessment-question-title">Q7. Reporting/decision cadence <span class="required">*</span></h2>
+              <p class="assessment-question-desc">How often do you need to make decisions?</p>
+              <div class="assessment-options assessment-options-single">
+                <label class="assessment-option">
+                  <input type="radio" name="cadence" value="realtime" required>
+                  <span class="assessment-option-label">Real-time / intra-day</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="cadence" value="daily">
+                  <span class="assessment-option-label">Daily</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="cadence" value="weekly">
+                  <span class="assessment-option-label">Weekly</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="cadence" value="ad_hoc">
+                  <span class="assessment-option-label">Ad hoc</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="8">
+              <h2 class="assessment-question-title">Q8. Biggest blocker <span class="required">*</span></h2>
+              <p class="assessment-question-desc">What slows you down most?</p>
+              <div class="assessment-options assessment-options-single">
+                <label class="assessment-option">
+                  <input type="radio" name="blocker" value="data_access" required>
+                  <span class="assessment-option-label">Data access / permissions / ownership</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="blocker" value="data_quality">
+                  <span class="assessment-option-label">Data quality (missing/inconsistent)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="blocker" value="kpi_definitions">
+                  <span class="assessment-option-label">KPI definitions (teams disagree)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="blocker" value="too_manual">
+                  <span class="assessment-option-label">Too manual (Excel/PPT grind)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="blocker" value="no_clear_owner">
+                  <span class="assessment-option-label">No clear owner (Ops vs IT vs Finance)</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="blocker" value="low_trust">
+                  <span class="assessment-option-label">Low trust/adoption (reports exist, not used)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="assessment-step" data-step="9">
+              <h2 class="assessment-question-title">Q9. Readiness <span class="required">*</span></h2>
+              <p class="assessment-question-desc">Where are you in your journey?</p>
+              <div class="assessment-options assessment-options-single">
+                <label class="assessment-option">
+                  <input type="radio" name="readiness" value="ready_pilot" required>
+                  <span class="assessment-option-label">We have stakeholder alignment and can run a pilot in 2-4 weeks</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="readiness" value="need_alignment">
+                  <span class="assessment-option-label">Interested, but need stakeholder alignment</span>
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="readiness" value="exploring">
+                  <span class="assessment-option-label">Exploring / want options - not urgent</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="assessment-step assessment-step-contact" data-step="10">
+              <h2 class="assessment-question-title">Almost done</h2>
+              <p class="assessment-question-desc">Enter your details to receive your roadmap and email notification.</p>
+              <div class="assessment-contact-fields">
+                <div class="assessment-form-group">
+                  <label for="assessmentEmail">Email <span class="required">*</span></label>
+                  <input type="email" id="assessmentEmail" name="email" required placeholder="your@company.com">
+                </div>
+                <div class="assessment-form-group">
+                  <label for="assessmentName">Full name</label>
+                  <input type="text" id="assessmentName" name="name" placeholder="Your name">
+                </div>
+                <div class="assessment-form-group">
+                  <label for="assessmentCompany">Company</label>
+                  <input type="text" id="assessmentCompany" name="company" placeholder="Company name">
+                </div>
+              </div>
+            </div>
+
+            <div class="assessment-form-actions">
+              <button type="button" class="btn btn-secondary assessment-btn-prev" id="btnPrev" disabled>Previous</button>
+              <button type="button" class="btn btn-primary assessment-btn-next" id="btnNext">Next</button>
+              <button type="submit" class="btn btn-primary assessment-btn-submit" id="btnSubmit" style="display:none;">Submit Assessment</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <div id="assessmentSuccess" class="assessment-success" style="display:none;">
+        <div class="container">
+          <div class="assessment-success-card">
+            <h2 class="assessment-success-title">Thank you</h2>
+            <p class="assessment-success-desc">Your assessment has been submitted. We'll send your tailored roadmap and next steps to your email shortly.</p>
+            <a class="btn btn-primary" href="contact.html">Book a Strategy Call</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="container footer-inner">
+          <div class="footer-top d-flex justify-content-between">
+            <div class="footer-intro">
+              <p class="footer-intro-text">We build data foundations, dashboards leaders trust, and applied AI in workflows—so teams move faster and cut manual work.</p>
+              <div class="footer-social">
+                <h4 class="footer-social-title">Find us</h4>
+                <ul class="footer-social-list d-flex align-items-center">
+                  <li class="list-item">
+                    <a href="https://www.linkedin.com/company/datacultindia/" target="_blank">
+                      <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_301_2182)">
+                          <path d="M3.63281 15V4.87953H0.202508V15H3.63281ZM1.9181 3.49692C3.11431 3.49692 3.85889 2.71978 3.85889 1.74862C3.8366 0.755565 3.11436 0 1.9408 0C0.767434 0 0.00012207 0.75558 0.00012207 1.74862C0.00012207 2.71983 0.74452 3.49692 1.89571 3.49692H1.918H1.9181ZM5.53147 15H8.96177V9.34824C8.96177 9.04576 8.98406 8.7436 9.07465 8.52738C9.32263 7.92304 9.88705 7.29712 10.8346 7.29712C12.0759 7.29712 12.5725 8.2252 12.5725 9.5857V14.9999H16.0026V9.19695C16.0026 6.08834 14.3103 4.64193 12.0533 4.64193C10.2028 4.64193 9.39033 5.65626 8.93895 6.34712H8.96185V4.87932H5.53155C5.57657 5.82897 5.53155 14.9998 5.53155 14.9998L5.53147 15Z" fill="white" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_301_2182">
+                            <rect width="16" height="15" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-links">
+              <ul class="footer-list footer-list-primary">
+                <li class="list-items"><a href="index.html" class="footer-list-link">Home</a></li>
+                <li class="list-items"><a href="#industries" class="footer-list-link">Industries</a></li>
+                <li class="list-items"><a href="service.html" class="footer-list-link">Services</a></li>
+              </ul>
+              <ul class="footer-list footer-list-secondary">
+                <li class="list-items"><a href="case-study.html" class="footer-list-link">Case Studies</a></li>
+                <li class="list-items"><a href="blog.html" class="footer-list-link">Blogs</a></li>
+                <li class="list-items"><a href="assessment.html" class="footer-list-link">Assessment</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-left">
+              <span class="footer-bottom-text">© 2024 DataCult. All rights reserved.</span>
+              <a href="#" class="footer-bottom-link">Privacy Policy</a>
+              <a href="#" class="footer-bottom-link">Terms of Service</a>
+            </div>
+          </div>
+          <div class="footer-bg-image">
+            <img src="./assets/images/DataCult.png" alt="DataCult">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/custom/header.js"></script>
+    <script src="assets/js/custom/assessment.js"></script>
+  </body>
+
+</html>
