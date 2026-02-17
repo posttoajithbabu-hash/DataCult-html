@@ -159,31 +159,16 @@
   }
 
   .blog-inner-intro {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #1b2e3a;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
     margin-bottom: 32px;
   }
 
-  .blog-inner-body h2 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #0b1920;
-    line-height: 1.4;
-    margin: 32px 0 12px;
-  }
-
-  .blog-inner-body h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #0b1920;
-    margin: 20px 0 8px;
-  }
-
   .blog-inner-body p {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #425a6b;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
   }
 
   .blog-inner-body p + p {
@@ -217,7 +202,7 @@
     margin-bottom: 10px;
     font-size: 15px;
     line-height: 1.6;
-    color: #425a6b;
+    color: #000;
   }
 
   .blog-inner-list li::before,
@@ -315,4 +300,71 @@
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 16px;
   }
+}
+
+/* Blog inner page - all p tags */
+.blog-inner-banner-section p,
+.blog-inner-content-section p {
+  font-size: 20px;
+}
+
+/* Article (blog-inner-body) - strong styling */
+.blog-inner-body strong {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Article (blog-inner-body) - heading styles h1 to h6 */
+.blog-inner-body h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4;
+  margin: 32px 24px 12px;
+}
+
+.blog-inner-body h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4;
+  margin: 32px 24px 12px;
+}
+
+.blog-inner-body h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4;
+  margin: 24px 0 10px;
+}
+
+.blog-inner-body h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4;
+  margin: 20px 0 8px;
+}
+
+.blog-inner-body h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4;
+  margin: 18px 0 8px;
+}
+
+.blog-inner-body h6 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4;
+  margin: 16px 0 8px;
+}
+
+/* Article (blog-inner-body) - list items */
+.blog-inner-body li {
+  font-size: 18px;
+  line-height: 120%;
 }
