@@ -85,6 +85,9 @@
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     display: none ;
+    @include mq(tablet) {
+      margin-top: 10px;
+    }
     .menu-item {
       display: block;
       padding: 10px 0px;
@@ -412,7 +415,7 @@ nav .hamburger div:nth-child(2) {
       }
 
       &.open {
-        padding: 50px 20px 20px 60px;
+        padding: 24px;
         height: 100vh;
         opacity: 1;
         visibility: visible;
@@ -435,12 +438,13 @@ nav .hamburger div:nth-child(2) {
 
       .nav-items-list {
         position: relative;
-        margin: 10px 0;
-
+        margin: 0;
+        display: block;
+        width: 100%;
         .nav-link {
           padding: 20px 0;
-          font-size: 30px;
-          font-weight: 900;
+          font-size: 20px;
+          font-weight: 600;
         }
 
 

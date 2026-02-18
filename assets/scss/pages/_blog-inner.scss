@@ -1,13 +1,13 @@
 .blog-inner-banner-section {
   padding: 96px 0 40px;
-  background: #FFF6F1;
+  // background: #FFF6F1;
 
   @include mq(phone) {
     padding: 64px 0 48px;
   }
 
   .blog-inner-banner {
-    max-width: 980px;
+    // max-width: 980px;
     margin: 0 auto;
   }
 
@@ -136,7 +136,7 @@
 
 .blog-inner-content-section {
   padding: 0 0 40px 0;
-  background: #FFF6F1;
+  // background: #FFF6F1;
 
 
   @include mq(phone) {
@@ -166,8 +166,8 @@
   }
 
   .blog-inner-body p {
-    font-size: 20px;
-    line-height: 120%;
+    font-size: 18px;
+    line-height: 160%;
     color: #425a6b;
   }
 
@@ -286,6 +286,10 @@
     border-radius: 16px;
     padding: 20px;
     color: #fff;
+    .btn-primary {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .blog-inner-cta h4 {

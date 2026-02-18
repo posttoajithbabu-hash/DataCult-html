@@ -81,6 +81,18 @@
   .footer-links {
     display: flex;
     gap: 56px;
+     @include mq(phone) {
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .footer-list-primary {
+        @include mq(phone) {
+          width: 100%;
+          flex-direction: row;
+          font-weight: 600;
+          justify-content: space-between;
+        }
+      }
   }
 
   .footer-inner,
@@ -125,6 +137,14 @@
 
     &.footer-list-services {
       max-width: 300px;
+      @include mq(phone) {
+        max-width: calc(50% - 24px);
+      }
+    }
+    &.footer-list-industries {
+       @include mq(phone) {
+        max-width: calc(50% - 24px);
+      }
     }
 
     .footer-list-title {
@@ -156,7 +176,7 @@
       }
 
       @include mq(phone) {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
 
       }
     }
@@ -246,6 +266,20 @@
       gap: 24px;
     }
   }
-
+  @include mq(phone) {
+    .footer-top {
+      margin-bottom: 20px;
+    }
+    .footer-bottom {
+      padding: 0;
+    }
+    .footer-bottom-left {
+      span:not(.footer-bottom-text) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
 
 }

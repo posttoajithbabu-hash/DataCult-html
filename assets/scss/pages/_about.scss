@@ -4,7 +4,7 @@
   background: #FFFAF6;
 
   @include mq(phone) {
-    padding: 64px 0 40px 0;
+    padding: 30px 0 40px 0;
   }
 
   .about-banner-wrapper {
@@ -137,7 +137,7 @@
   background: $white;
 
   @include mq(phone) {
-    padding: 56px 0 72px 0;
+    padding: 40px 0;
   }
 
   .founder-header {
@@ -177,6 +177,9 @@
     background-size: cover;
     background-position: center;
     padding: 60px 0;
+    @include mq(phone) {
+      padding: 0;
+    }
   }
 
   .founder-card {
@@ -189,6 +192,9 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
     max-width: 720px;
     margin: 0 auto;
+    @include mq(phone) {
+      padding: 20px;
+    }
   }
 
   .founder-card-media img {
@@ -244,6 +250,12 @@
       height: auto;
     }
   }
+   .founder-card-wrapper {
+    @include mq(phone) {
+      padding: 0;
+      margin: 0px 24px;
+    }
+  }
 }
 
 // impact-section
@@ -251,7 +263,7 @@
   
 
   .impact-content-about {
-    max-width: 690px;
+    max-width: 640px;
   }
 
 }

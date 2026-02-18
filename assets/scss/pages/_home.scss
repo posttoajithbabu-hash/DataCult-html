@@ -13,7 +13,7 @@
     z-index: 2;
 
     @include mq(phone) {
-      padding: 110px 0 60px 0;
+      padding: 75px 0 60px 0;
 
     }
     .btn-primary {
@@ -69,6 +69,10 @@
         border-color: #07E77D;
       }
     }
+    @include mq(phone) {
+     padding-left: 0px;
+     padding-right: 0px;
+    }
   }
 
   .banner-link-icon {
@@ -118,6 +122,9 @@
     display: flex;
     width: max-content;
     animation: banner-logos-scroll 28s linear infinite;
+    @include mq(phone) {
+       animation: banner-logos-scroll 40s linear infinite;
+    }
     
   }
 
@@ -141,7 +148,7 @@
     transition: filter 0.2s ease-in-out;
     img {
       display: block;
-      max-height: 40px;
+      max-height: 72px;
       width: auto;
       border-radius: 4px;
       filter: grayscale(100%) brightness(0) invert(1);
@@ -478,10 +485,11 @@
 .impact-section {
   padding: 100px 0;
   background: #04314B;
+  overflow: hidden;
  
 
   @include mq(phone) {
-    padding: 64px 0;
+    padding: 40px 0;
   }
 
   .impact-content {
@@ -511,6 +519,9 @@
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
     font-size: 16px;
+     @include mq(phone) {
+      margin-top: 14px;
+    }
   }
 
   .impact-list {
@@ -545,6 +556,10 @@
   }
   .impact-wrapper {
     position: relative;
+    display: flex;
+     @include mq(tablet) {
+      flex-direction: column;
+     }
   }
   .impact-card-item {
     gap: 12px;
@@ -556,6 +571,10 @@
     min-width: 380px;
     overflow: hidden;
     width: 100%;
+    @include mq(phone) {
+        max-width: 100%;
+        min-width: 100%;
+    }
     &-wrapper {
       display: flex;
       gap: 24px;
@@ -611,7 +630,8 @@
     color: rgba(255, 255, 255, 0.8);
 
     @include mq(phone) {
-      font-size: 22px;
+      font-size: 20px;
+      margin-bottom: 10px;
     }    
 
     margin-bottom: 16px;
@@ -627,7 +647,10 @@
     font-size: 16px;
     line-height: 140%;
     letter-spacing: -1%;
-  color: rgba(255, 255, 255, 0.8);    
+    color: rgba(255, 255, 255, 0.8);    
+    @include mq(phone) {
+      margin-top: 14px;
+    }
   }
 
   .industries-stack {
@@ -655,11 +678,12 @@
     @include mq(tablet) {
       position: static;
       flex-direction: column;
-      padding: 24px;
+      padding: 0px;
     }
 
     @include mq(phone) {
       position: static;
+      gap: 20px;
     }
   }
 
@@ -676,10 +700,12 @@
     flex: 1;
     min-width: 0;
     padding: 32px 40px;
-
-    @include mq(phone) {
-      padding: 0;
+    @include mq(tablet) {
+      padding: 24px 24px 0px 24px;
       gap: 32px;
+    }
+    @include mq(phone) {
+       gap: 10px;
     }
   }
 
@@ -689,12 +715,20 @@
     line-height: 140%;
     color: $white;
     margin-bottom: 24px;
+     @include mq(phone) {
+        font-size: 26px;
+        line-height: 130%;
+        margin-bottom: 5px;
+    }
   }
 
   .industry-desc {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
     margin-bottom: 24px;
+     @include mq(phone) {
+        margin-bottom: 15px;
+    }
   }
 
   .industry-link {
@@ -750,7 +784,7 @@ color: rgba(255, 255, 255, 0.5);
   background: $white;
 
   @include mq(phone) {
-    padding: 64px 0;
+    padding: 45px 0;
   }
 
   .testimonial-head {
@@ -797,12 +831,15 @@ color: rgba(255, 255, 255, 0.5);
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 24px;
+    @include mq(phone) {
+      font-size: 18px;
+    }
   }
 
   .testimonial-author {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
   }
 
   .testimonial-avatar {
@@ -817,17 +854,25 @@ color: rgba(255, 255, 255, 0.5);
   .testimonial-author-text {
     display: flex;
     flex-direction: column;
+    border-left: 3px solid #07E77D;
+    padding-left: 20px;
   }
 
   .testimonial-author-name {
     color: $primary-text;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 20px;
+     @include mq(phone) {
+      font-size: 18px;
+    }
   }
 
   .testimonial-author-role {
     color: rgba(4, 49, 75, 0.6);
-    font-size: 12px;
+    font-size: 18px;
+     @include mq(phone) {
+      font-size: 16px;
+    }
   }
 
   .owl-nav {
@@ -1055,7 +1100,7 @@ color: rgba(255, 255, 255, 0.5);
   text-align: center;
 
   @include mq(phone) {
-    padding: 64px 0;
+    padding: 45px 0;
   }
 
   .case-study-head {
@@ -1069,17 +1114,26 @@ color: rgba(255, 255, 255, 0.5);
     margin-bottom: 20px;
 
     @include mq(phone) {
-      font-size: 22px;
+      font-size: 20px;
+      text-align: left;
+       margin-bottom: 12px;
     }
   }
 
   .case-study-title {
     color: $primary-text;
+    @include mq(phone) {
+      text-align: left;
+    }
   }
 
   .case-study-desc {
     margin-top: 20px;
     color: #426478;
+     @include mq(phone) {
+      text-align: left;
+      margin-top: 16px;
+    }
   }
 
   .case-study-grid {
@@ -1207,13 +1261,17 @@ color: rgba(255, 255, 255, 0.5);
 .technology-section {
   background-color: #ffffff;
   padding: 120px 0 50px 0;
+   @include mq(phone) {
+    padding: 45px 0;
+  }
   .technology-eyebrow {
     font-size: 28px;
     color: rgba(4, 49, 75, .6);
     margin-bottom: 20px;
     
     @include mq(phone) {
-      font-size: 22px;
+      font-size: 20px;
+      margin-bottom: 16px;
     }
   }
   .technology-title {
@@ -1223,6 +1281,9 @@ color: rgba(255, 255, 255, 0.5);
   .technology-desc {
     margin-top: 20px;
     color: #426478;
+    @include mq(phone) {
+     margin-top: 12px;
+    }
   }
   .technology-content {
     max-width: 800px;
@@ -1232,11 +1293,17 @@ color: rgba(255, 255, 255, 0.5);
     align-items: center;
     margin-top: 40px;
     flex-wrap: wrap;
+    @include mq(phone) {
+     margin-top: 10px;
+    }
     .technology-logo-item {
       max-width: calc(100% / 6);
       width: 100%;
       padding: 15px 10px;
       box-sizing: border-box;
+      @include mq(phone) {
+        max-width: calc(100% / 3);
+      }
       img {
         filter: grayscale(100%) brightness(0);
       }

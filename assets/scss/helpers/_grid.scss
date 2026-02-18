@@ -14,14 +14,14 @@
 	}
 
 	@include mq(phone) {
-		padding: 0 15px;
+		padding: 0 20px;
 	}
 
 	&-fluid {
 		padding: 0 40px;
 
 		@include mq(tablet) {
-			padding: 0 15px;
+			padding: 0 20px;
 		}
 	}
 }
@@ -40,6 +40,6 @@
 	}
 
 	@include mq(phone) {
-		padding: 0 15px;
+		padding: 0 20px;
 	}
 }
