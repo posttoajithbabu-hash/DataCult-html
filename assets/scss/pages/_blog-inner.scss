@@ -1,5 +1,5 @@
 .blog-inner-banner-section {
-  padding: 96px 0 80px;
+  padding: 96px 0 40px;
   background: #FFF6F1;
 
   @include mq(phone) {
@@ -135,7 +135,7 @@
 }
 
 .blog-inner-content-section {
-  padding: 80px 0;
+  padding: 0 0 40px 0;
   background: #FFF6F1;
 
 
@@ -161,14 +161,14 @@
   .blog-inner-intro {
     font-size: 20px;
     line-height: 120%;
-    color: #000;
+    color: #425a6b;
     margin-bottom: 32px;
   }
 
   .blog-inner-body p {
     font-size: 20px;
     line-height: 120%;
-    color: #000;
+    color: #425a6b;
   }
 
   .blog-inner-body p + p {
@@ -202,7 +202,7 @@
     margin-bottom: 10px;
     font-size: 15px;
     line-height: 1.6;
-    color: #000;
+    color: #425a6b;
   }
 
   .blog-inner-list li::before,
@@ -306,65 +306,77 @@
 .blog-inner-banner-section p,
 .blog-inner-content-section p {
   font-size: 20px;
+  color: #425a6b;
+  line-height: 140%;
 }
 
 /* Article (blog-inner-body) - strong styling */
 .blog-inner-body strong {
   font-size: 20px;
   font-weight: 600;
+  color: #0b1920;
 }
 
 /* Article (blog-inner-body) - heading styles h1 to h6 */
 .blog-inner-body h1 {
   font-size: 32px;
   font-weight: 700;
-  color: #000;
+  color: #0b1920;
   line-height: 1.4;
-  margin: 32px 24px 12px;
+  margin: 32px 0 ;
 }
 
 .blog-inner-body h2 {
   font-size: 28px;
   font-weight: 700;
-  color: #000;
+  color: #0b1920;
   line-height: 1.4;
-  margin: 32px 24px 12px;
+  margin: 32px 0 12px 0 ;
 }
 
 .blog-inner-body h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #000;
+  color: #0b1920;
   line-height: 1.4;
-  margin: 24px 0 10px;
+  margin: 24px 0 12px 0 ;
 }
 
 .blog-inner-body h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #000;
+  color: #0b1920;
   line-height: 1.4;
-  margin: 20px 0 8px;
+  margin: 20px 0 12px 0 ;
 }
 
 .blog-inner-body h5 {
   font-size: 18px;
   font-weight: 700;
-  color: #000;
+  color: #0b1920;
   line-height: 1.4;
-  margin: 18px 0 8px;
+  margin: 18px 0 12px 0 ;
 }
 
 .blog-inner-body h6 {
   font-size: 16px;
   font-weight: 700;
-  color: #000;
+  color: #0b1920;
   line-height: 1.4;
-  margin: 16px 0 8px;
+  margin: 16px 0 ;
 }
 
 /* Article (blog-inner-body) - list items */
+.blog-inner-body ul {
+  margin-top: 16px;
+}
+.blog-inner-body ol {
+  margin-top: 16px;
+}
+
 .blog-inner-body li {
   font-size: 18px;
   line-height: 120%;
+  color: #425a6b;
+  margin-bottom: 10px;
 }
