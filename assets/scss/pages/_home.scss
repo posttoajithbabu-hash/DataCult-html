@@ -138,6 +138,7 @@
 
   .banner-logo-item {
     min-width: 200px;
+    max-width: 220px;
     height: 112px;
     padding: 16px 32px;
     display: flex;
@@ -556,10 +557,6 @@
   }
   .impact-wrapper {
     position: relative;
-    display: flex;
-     @include mq(tablet) {
-      flex-direction: column;
-     }
   }
   .impact-card-item {
     gap: 12px;
@@ -1338,3 +1335,9 @@ color: rgba(255, 255, 255, 0.5);
       }
     
 }
+.page-template-template-about .impact-section .impact-wrapper {
+    display: flex;
+    @include mq(tablet) {
+      flex-direction: column;
+     }
+  }
